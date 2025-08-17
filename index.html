@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar"> 
+<div class="logo"><span class="vin">Vin</span><span class="shik">Shik</span></div>
+      <nav>
+        <a href="#" class="active" data-target="home"><i data-lucide="home"></i> Home</a>
+        <a href="#" data-target="calendar"><i data-lucide="calendar"></i> Calendar</a>
+        <a href="#" data-target="map"><i data-lucide="map"></i> Map</a>
+        <a href="#" data-target="clients"><i data-lucide="users"></i> Clients</a>
+        <a href="#" data-target="jobs"><i data-lucide="briefcase"></i> Jobs</a>
+        <a href="#" data-target="quotes"><i data-lucide="file-text"></i> Quotes</a>
+        <a href="#" data-target="services"><i data-lucide="layers"></i> My Services</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+<section class="class-action">
+  <div class="actions">
+    <i data-lucide="mail"></i>
+    <i data-lucide="settings"></i>
+    <img src="https://i.pravatar.cc/40" class="avatar" />
+  </div>
+
+  <div class="class-text">
+    <h2>Welcome back, Julie 👋</h2>
+    <p>Here’s what you need to focus on today</p>
+  </div>
+</section>
+
+      <!-- Cards -->
+      <section class="cards">
+        <div class="card blue">
+          <h4>Active Jobs</h4>
+          <div class="trend"><i data-lucide="trending-up"></i> +12.2%</div>
+          <div class="number">43.7k</div>
+          <div class="bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="card red">
+          <h4>Jobs In Progress</h4>
+          <div class="trend"><i data-lucide="trending-down"></i> -31.1%</div>
+          <div class="number">92.3k</div>
+          <div class="bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="card green">
+          <h4>Finished Jobs</h4>
+          <div class="trend"><i data-lucide="trending-up"></i> +3.3%</div>
+          <div class="number">66.3k</div>
+          <div class="bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="card purple">
+          <h4>New Leads</h4>
+          <div class="trend"><i data-lucide="trending-up"></i>+31.1%</div>
+          <div class="number">92.3k</div>
+          <div class="bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+    
+ 
+  <section id="calendar" class="content-section">
+    <h2>📅 Calendar</h2>
+    <div id="calendar-container"></div>
+  </section>
+
+  
+  <section id="map" class="content-section">
+    <h2>🗺️ Map</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086809241609!2d-122.41941508468162!3d37.774929779759444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b17f3c9%3A0x4a2f2b9f8f2c4b61!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1673456789012!5m2!1sen!2sus"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+
+  
+  <section id="clients" class="content-section">
+    <h2>👥 Clients</h2>
+    <table class="data-table">
+      <tr><th>Name</th><th>Email</th><th>Status</th></tr>
+      <tr><td>John Doe</td><td>john@example.com</td><td>Active</td></tr>
+      <tr><td>Jane Smith</td><td>jane@example.com</td><td>Inactive</td></tr>
+      <tr><td>Mark Wilson</td><td>mark@example.com</td><td>Active</td></tr>
+    </table>
+  </section>
+
+
+  
+  <section id="jobs" class="content-section">
+    <h2>💼 Jobs</h2>
+    <ul class="list">
+      <li>Website Development - In Progress</li>
+      <li>Mobile App Design - Completed</li>
+      <li>SEO Optimization - Pending</li>
+    </ul>
+  </section>
+
+
+  
+  <section id="quotes" class="content-section">
+    <h2>📑 Quotes</h2>
+    <div class="quotes">
+      <blockquote>"Quality is not an act, it is a habit." – Aristotle</blockquote>
+      <blockquote>"The best way to predict the future is to invent it." – Alan Kay</blockquote>
+      <blockquote>"Success is not final, failure is not fatal." – Winston Churchill</blockquote>
+    </div>
+  </section>
+
+
+  
+  <section id="services" class="content-section">
+    <h2>🛠️ My Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Building responsive and modern websites.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mobile Application Development</h3>
+        <p>Cross-platform mobile application development.</p>
+      </div>
+      <div class="service-card">
+        <h3>Android Development</h3>
+        <p>Provision of professional expertise for android operating system.</p>
+      </div>
+      <div class="service-card">
+        <h3>IT Consulting</h3>
+        <p>Provide expert advise and support to business.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

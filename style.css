@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+/* Logo colors */
+/* Logo colors */
+/* Logo colors */
+/* Logo colors */
+.logo .vin { 
+  color: #000;     /* Vin black */
+  font-weight: bold;
+}
+.logo .shik { 
+  color: #0aa1f1;  /* Shik blue */
+  font-weight: bold;
+}
+.logo {
+  font-size: 32px;   /* default पेक्षा मोठा */
+  font-weight: bold;
+}
+
+.logo .vin { 
+  color: #000;       /* Vin black */
+}
+
+.logo .shik { 
+  color: #0aa1f1;    /* Shik blue */
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #555;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #f0f6ff;
+  color: #0aa1f1;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.topbar h2 {
+  font-size: 20px;
+}
+
+.topbar p {
+  color: #777;
+}
+
+.topbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.card h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card .trend {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card .trend i {
+  margin-right: 5px;
+}
+
+.card .number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card .bars {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: flex-end; /* ✅ bars bottom ला align होतील */
+  gap: 3px;
+  height: 40px; /* ✅ container height देणे आवश्यक */
+}
+
+.card .bars span {
+  display: block;
+  width: 6px;
+  border-radius: 3px;
+}
+.class-action {
+  position: relative;
+  height: 120px; /* section ला उंची दिली */
+  margin-bottom: 20px;
+}
+
+/* actions top-right */
+.class-action .actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.class-action .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* text bottom-left */
+.class-action .class-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.class-text h2 {
+  font-size: 28px;   /* आधी 20px होतं, आता मोठं */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.class-text p {
+  color: #777;
+  font-size: 14px;
+}
+
+
+
+
+
+
+/* Colors */
+.blue .bars span { background: #0aa1f1; }
+.red .bars span { background: #ff6b6b; }
+.green .bars span { background: #28c76f; }
+.purple .bars span { background: #9b59b6; }
+
+/* Random heights for bar effect */
+.bars span:nth-child(1) { height: 20px; }
+.bars span:nth-child(2) { height: 30px; }
+.bars span:nth-child(3) { height: 15px; }
+.bars span:nth-child(4) { height: 25px; }
+
+/* Hide non-active sections */
+.content-section {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive sidebar */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .sidebar nav a {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar nav a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+}
+
+#calendar-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.data-table th {
+  background: #f0f6ff;
+  color: #0aa1f1;
+}
+
+/* List styling */
+.list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.list li {
+  margin-bottom: 8px;
+}
+
+/* Quotes styling */
+.quotes {
+  margin-top: 15px;
+}
+.quotes blockquote {
+  border-left: 4px solid #0aa1f1;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Logo colors */
+.logo .vin { color: #0aa1f1; font-weight: bold; }
+.logo .shik { color: #000; font-weight: bold; }
+
+/* Map styling */
+.map-container {
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Logo colors */
+.logo .vin { color: #0aa1f1; font-weight: bold; }
+.logo .shik { color: #000; font-weight: bold; }
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #0aa1f1;
+}
